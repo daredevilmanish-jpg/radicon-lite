@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RADICON-Lite | Powering a Safer, Stronger Tomorrow</title>
+<meta name="description" content="RADICON-Lite wires and cables for homes, industry and power infrastructure.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--red:#c91f32;--red-dark:#a91627;--ink:#101b2a;--muted:#6d7783;--pale:#f5f5f3;--line:#e8e8e5;--white:#fff;--max:1220px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+/* Soft cursor-following light */
+.cursor-light{position:fixed;left:0;top:0;width:440px;height:440px;border-radius:50%;pointer-events:none;z-index:9999;opacity:0;transform:translate3d(-50%,-50%,0);background:radial-gradient(circle,rgba(255,190,155,.23) 0%,rgba(235,81,92,.17) 22%,rgba(190,37,58,.075) 45%,transparent 70%);mix-blend-mode:screen;transition:opacity .25s ease;will-change:transform}
+body.cursor-active .cursor-light{opacity:1}
+@media (hover:none),(pointer:coarse),(prefers-reduced-motion:reduce){.cursor-light{display:none}}
+body{margin:0;color:var(--ink);font-family:"DM Sans",sans-serif;background:#fff}a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 56px));margin:auto}
+.topbar{height:34px;background:#101b2a;color:#cbd0d6;font-size:10px;letter-spacing:.11em}.topbar .wrap{height:100%;display:flex;align-items:center;justify-content:space-between}
+header{height:82px;background:#fff;position:sticky;top:0;z-index:20;border-bottom:1px solid #eee}.head{height:100%;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;min-width:180px}.brand img{width:175px;max-height:60px;object-fit:contain}
+nav{display:flex;align-items:center;gap:28px;font-size:12px;font-weight:700;color:#36404c}nav a:hover{color:var(--red)}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--red);color:white;padding:14px 21px;font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;border:0;cursor:pointer;transition:.2s}
+.btn:hover{background:var(--red-dark);transform:translateY(-2px)}.menu{display:none;background:none;border:0;font-size:24px}
+.hero{position:relative;overflow:hidden;background:linear-gradient(90deg,rgba(9,22,36,.97) 0%,rgba(9,22,36,.88) 48%,rgba(9,22,36,.2) 100%),url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=2000&q=85') center/cover;min-height:590px;color:white}
+.hero:after{content:"";position:absolute;right:-100px;top:-160px;width:560px;height:850px;border:1px solid rgba(255,255,255,.12);transform:rotate(28deg)}
+.hero .wrap{position:relative;z-index:1;min-height:590px;display:flex;align-items:center}
+.hero-copy{max-width:670px;padding:75px 0}.eyebrow{font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:#e7b5bb;font-weight:800}
+h1,h2,h3,p{margin-top:0}h1{font:800 clamp(48px,6vw,78px)/.99 Manrope,sans-serif;letter-spacing:-.065em;margin:22px 0}
+h1 em{font-style:normal;color:#ed5968}.hero p{font-size:15px;line-height:1.85;color:#d4d9df;max-width:590px}.hero-actions{display:flex;gap:13px;margin-top:30px}
+.btn.outline{background:transparent;border:1px solid rgba(255,255,255,.55)}.btn.outline:hover{background:#fff;color:var(--ink)}
+.stats{background:white;box-shadow:0 10px 35px rgba(15,27,42,.08);position:relative;z-index:2;margin-top:-1px}
+.statrow{display:grid;grid-template-columns:repeat(3,1fr);padding:28px 0}.stat{text-align:center;border-right:1px solid var(--line)}.stat:last-child{border:0}.stat strong{display:block;color:var(--red);font:800 31px Manrope}.stat span{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:#707983}
+.client-strip{padding:36px 0 44px;text-align:center}.smallcap{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#8b929a;font-weight:800}.client-logos{display:flex;justify-content:space-around;gap:22px;align-items:center;flex-wrap:wrap;margin-top:23px;color:#a3a8ae;font:800 16px Manrope;letter-spacing:.04em}
+section{padding:92px 0}.section-head{max-width:690px;margin-bottom:38px}.section-head.center{text-align:center;margin-left:auto;margin-right:auto}.kicker{color:var(--red);font-size:10px;letter-spacing:.22em;text-transform:uppercase;font-weight:800;margin-bottom:13px}
+h2{font:800 clamp(34px,4vw,51px)/1.08 Manrope,sans-serif;letter-spacing:-.055em;margin-bottom:17px}.intro{color:var(--muted);font-size:14px;line-height:1.9}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.why-image{min-height:440px;background:linear-gradient(0deg,rgba(8,22,36,.35),transparent),url('https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=1200&q=85') center/cover;position:relative}
+.image-label{position:absolute;left:24px;bottom:24px;background:#fff;padding:18px 22px;font:700 17px Manrope;max-width:260px}
+.features{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:30px}.feature{border-top:1px solid var(--line);padding-top:18px}.feature b{display:block;font-size:13px;margin-bottom:7px}.feature span{font-size:12px;line-height:1.7;color:var(--muted)}
+.story{background:#f5f5f3}.timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:0 36px;margin-top:45px}
+.milestone{border-top:2px solid #d9dadd;padding:22px 0 30px;position:relative}.milestone:before{content:"";position:absolute;top:-7px;left:0;width:12px;height:12px;border-radius:50%;background:var(--red);border:2px solid #f5f5f3}
+.milestone small{color:var(--red);font-weight:800;font-size:10px;letter-spacing:.15em}.milestone h3{font:700 18px Manrope;margin:12px 0 8px}.milestone p{font-size:12px;line-height:1.8;color:var(--muted)}
+.safety{background:#101d2c;color:#fff}.safety-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.safety h2{max-width:510px}.safety .intro{color:#c0c8d1}
+.safety-photo{height:420px;background:linear-gradient(0deg,rgba(7,19,32,.35),transparent),url('https://images.unsplash.com/photo-1581092335878-2d9ff86ca2bf?auto=format&fit=crop&w=1200&q=85') center/cover}
+.safety-points{display:flex;gap:25px;flex-wrap:wrap;margin-top:27px}.safety-points span{font-size:12px;color:#e5e9ed}.safety-points span:before{content:"✓";color:#f05a69;margin-right:9px}
+.categories{background:#fff}.category-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.category{border:1px solid var(--line);padding:28px 26px;min-height:245px;transition:.25s}.category:hover{border-color:#e5a0a7;box-shadow:0 16px 36px rgba(12,28,45,.08);transform:translateY(-4px)}
+.category .num{font:800 12px Manrope;color:var(--red)}.category h3{font:700 21px Manrope;margin:23px 0 12px}.category p{font-size:12px;line-height:1.8;color:var(--muted)}.arrow{color:var(--red);font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+.products{background:#f5f5f3}.product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.product{background:#fff;border:1px solid #e8e8e5;transition:.25s}.product:hover{transform:translateY(-5px);box-shadow:0 15px 34px rgba(12,28,45,.09)}
+.product-img{height:170px;background:radial-gradient(circle at 50% 45%,rgba(203,31,50,.14),transparent 45%),linear-gradient(135deg,#e6e8e9,#f7f7f5);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.product-img img{width:100%;height:100%;object-fit:cover}.product-img .symbol{font:800 42px Manrope;color:#c5c8ca}
+.product-body{padding:21px}.product-body .label{font-size:9px;color:var(--red);letter-spacing:.16em;text-transform:uppercase;font-weight:800}
+.product-body h3{font:700 17px Manrope;margin:10px 0}.product-body p{font-size:11px;line-height:1.75;color:var(--muted);min-height:58px}.product-body a{font-size:10px;color:var(--red);font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+.benefit-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0 28px}.benefit{padding:25px 0;border-top:1px solid var(--line)}.benefit .icon{font-size:22px;color:var(--red)}.benefit h3{font:700 16px Manrope;margin:15px 0 8px}.benefit p{font-size:11px;line-height:1.8;color:var(--muted)}
+.cta{background:var(--red);color:#fff;padding:65px 0}.cta-row{display:flex;align-items:center;justify-content:space-between;gap:30px}.cta h2{font-size:clamp(30px,3.5vw,43px);max-width:660px;margin:0}.cta p{font-size:13px;color:#ffe2e5;margin:12px 0 0}.cta .btn{background:#fff;color:var(--ink);white-space:nowrap}
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:65px;align-items:center}.about-photo{height:390px;background:url('https://images.unsplash.com/photo-1567789884554-0b844b597180?auto=format&fit=crop&w=1200&q=85') center/cover}
+.collab{background:#f5f5f3}.collab-card{display:flex;align-items:center;justify-content:space-between;gap:40px;border:1px solid #e3e3df;padding:35px 40px;background:#fff}.collab-card h3{font:700 22px Manrope;margin:8px 0}.collab-card p{font-size:12px;color:var(--muted);line-height:1.8;max-width:700px;margin:0}
+.contact{background:#f7f7f5}.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:65px}.contact-list{margin-top:28px}.contact-item{border-top:1px solid #ddd;padding:16px 0}.contact-item small{display:block;color:#858d95;font-size:9px;letter-spacing:.15em;text-transform:uppercase}.contact-item b{display:block;font-size:14px;margin-top:6px}
+.form{background:#fff;padding:34px;box-shadow:0 12px 40px rgba(10,25,42,.06);display:grid;grid-template-columns:1fr 1fr;gap:15px}.form input,.form select,.form textarea{width:100%;padding:15px;border:1px solid #e4e4e0;background:#fafaf9;font:12px "DM Sans";outline:none}.form input:focus,.form select:focus,.form textarea:focus{border-color:var(--red)}.form textarea{grid-column:1/-1;min-height:100px;resize:vertical}.form button{grid-column:1/-1;justify-self:start}
+footer{background:#0d1927;color:#fff;padding:58px 0 22px}.footgrid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px}.footbrand img{width:175px;filter:brightness(0) invert(1);margin-bottom:18px}.footbrand p{font-size:11px;line-height:1.8;color:#aeb7c0;max-width:280px}
+footer h4{font-size:11px;letter-spacing:.14em;text-transform:uppercase;margin:8px 0 20px}footer .footlinks a{display:block;font-size:11px;color:#b9c1c9;margin:12px 0}footer .footlinks a:hover{color:#fff}
+.copyright{border-top:1px solid #2b3642;margin-top:45px;padding-top:20px;display:flex;justify-content:space-between;color:#87919b;font-size:10px}
+@media(max-width:950px){nav{gap:14px;font-size:10px}.product-grid{grid-template-columns:repeat(2,1fr)}.benefit-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){.wrap{width:calc(100% - 38px)}.topbar .wrap{justify-content:center}.topbar .right{display:none}header{height:70px}.brand img{width:150px}.menu{display:block}nav{display:none;position:absolute;top:70px;left:0;right:0;background:#fff;padding:22px;box-shadow:0 12px 20px #0001;flex-direction:column;align-items:flex-start}nav.open{display:flex}.head>.btn{display:none}.hero,.hero .wrap{min-height:560px}.hero-copy{padding:65px 0}h1{font-size:49px}.hero p{font-size:13px}.statrow{padding:20px 0}.stat strong{font-size:25px}.stat span{font-size:8px}.client-logos{font-size:12px}section{padding:70px 0}.why-grid,.safety-grid,.about-grid,.contact-grid{grid-template-columns:1fr;gap:32px}.why-image,.safety-photo{min-height:300px;height:300px}.timeline{grid-template-columns:1fr 1fr;gap:0 20px}.category-grid{grid-template-columns:1fr}.product-grid{grid-template-columns:1fr 1fr;gap:10px}.product-img{height:125px}.product-body{padding:14px}.product-body h3{font-size:14px}.product-body p{font-size:10px;min-height:0}.benefit-grid{grid-template-columns:1fr 1fr;gap:0 16px}.cta-row{display:block}.cta .btn{margin-top:25px}.collab-card{display:block;padding:25px}.form{padding:20px;grid-template-columns:1fr}.form textarea,.form button{grid-column:auto}.footgrid{grid-template-columns:1fr 1fr;gap:30px}.footbrand{grid-column:1/-1}.copyright{display:block;line-height:2}}
+
+/* RADICON-Lite premium dark industrial palette */
+:root{--ink:#eff3f8;--muted:#aab7c6;--pale:#142131;--line:#2c3b4c;--white:#101c2a}
+html,body{background:#0b1522;color:#eff3f8}
+header{background:#101c2a;border-bottom-color:#2a394a}
+.brand{background:#fff;border-radius:5px;padding:5px 10px}
+.brand img{max-height:54px}
+nav{color:#d7e0e9}nav a:hover{color:#ff7581}
+.menu{color:#e8edf3}
+.stats{background:#142333;box-shadow:0 12px 40px #0004}
+.stat{border-color:#304052}.stat span{color:#aab7c6}
+.client-strip{background:#0d1825}.client-logos{color:#91a0b0}
+section{background:#0d1927}
+.intro,.milestone p,.category p,.product-body p,.collab-card p{color:#aab7c6}
+.kicker{color:#ff7380}
+.image-label{background:#172738;color:#f2f5f8;border:1px solid #35475b}
+.story,.products,.collab{background:#142131}
+.milestone{border-color:#3a4a5a}.milestone:before{border-color:#142131}
+.safety{background:#09121e}
+.categories{background:#0d1927}
+.category{background:#142333;border-color:#304052}
+.category:hover{border-color:#d45c6b;box-shadow:0 16px 36px #0005}
+.product{background:#192a3c;border-color:#304052}
+.product:hover{box-shadow:0 15px 34px #0006}
+.product-img{background:radial-gradient(circle at 50% 45%,#c91f3240,transparent 46%),linear-gradient(135deg,#1b2b3d,#27394c)}
+.product-img .symbol{color:#92a0af}
+.feature,.benefit{border-color:#304052}
+.feature span,.benefit p{color:#aab7c6}
+.cta{background:#a91e31}.cta .btn{background:#f2f5f8;color:#142131}
+.collab-card{background:#192a3c;border-color:#344659}
+.contact{background:#0d1927}.contact-item{border-color:#344659}
+.form{background:#172738;box-shadow:0 12px 40px #0005}
+.form input,.form select,.form textarea{background:#0d1b2a;color:#edf2f8;border-color:#34495c}
+.form input::placeholder,.form textarea::placeholder{color:#8d9baa}
+footer{background:#070e18}
+@media(max-width:700px){nav{background:#101c2a;box-shadow:0 12px 25px #0007}}
+.brand-wordmark{display:inline-block;font-family:Arial,Helvetica,sans-serif;font-size:23px;font-weight:900;letter-spacing:-.7px;white-space:nowrap;color:#172638;line-height:1.2}.brand-hyphen{color:#ce2d43}.footbrand .brand-wordmark{color:#fff;font-size:25px;margin-bottom:18px}.footbrand .brand-hyphen{color:#ff6c7d}@media(max-width:700px){.brand-wordmark{font-size:20px}}
+
+.brand img{width:188px;max-height:68px;object-fit:contain;background:#fff;padding:2px 7px;border-radius:3px}.footer-brand-logo{display:block;width:192px;max-width:100%;height:auto;background:#fff;padding:5px;border-radius:3px;margin-bottom:18px}.hero .eyebrow{text-transform:none;letter-spacing:.12em}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="wrap"><span>ENGINEERED FOR RELIABLE POWER</span><span class="right">DOMESTIC • INDUSTRIAL • POWER &amp; TRANSMISSION</span></div></div>
+<header><div class="wrap head">
+<a class="brand" href="#home" aria-label="RADICON-Lite home"><img src="assets/radiconlite-linkedin-logo.png" alt="RadiconLite Wires logo"></a>
+<button class="menu" aria-label="Toggle navigation" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
+<nav>
+<a href="#why">Why Us</a><a href="#products">Products</a><a href="#benefits">Benefits</a><a href="#about">About Us</a><a href="#manufacturing">Manufacturing</a><a href="#contact">Contact</a>
+</nav><a class="btn" href="#contact">Get in Touch</a>
+</div></header>
+<main id="home">
+<section class="hero"><div class="wrap"><div class="hero-copy">
+<div class="eyebrow">Powering a Safer, Stronger Tomorrow.</div>
+<h1>Powering a Safer,<br><em>Stronger Tomorrow.</em></h1>
+<p>RADICON-Lite brings dependable wire and cable solutions for homes, businesses and industry. Explore a range designed to support safe power transmission and the infrastructure of tomorrow.</p>
+<div class="hero-actions"><a class="btn" href="#products">View All Products</a><a class="btn outline" href="#contact">Send an Enquiry</a></div>
+</div></div></section>
+<div class="stats"><div class="wrap statrow"><div class="stat"><strong>Quality</strong><span>At every connection</span></div><div class="stat"><strong>Reliable</strong><span>Product performance</span></div><div class="stat"><strong>Support</strong><span>For every requirement</span></div></div></div>
+<div class="client-strip"><div class="wrap"><div class="smallcap">Powering homes, businesses and industry</div><div class="client-logos"><span>DOMESTIC</span><span>INDUSTRIAL</span><span>AGRICULTURE</span><span>INFRASTRUCTURE</span><span>POWER</span></div></div></div>
+<section id="why"><div class="wrap why-grid"><div class="why-image"><div class="image-label">Engineered for dependable power</div></div><div><div class="kicker">Why RADICON-Lite</div><h2>Built on quality. Designed for confidence.</h2><p class="intro">Wherever power flows — at home, in commercial spaces or across industrial environments — choosing the right cable matters. RADICON-Lite is focused on dependable solutions for everyday and demanding applications.</p><div class="features"><div class="feature"><b>Application-led range</b><span>Solutions for residential, commercial and industrial requirements.</span></div><div class="feature"><b>Quality focus</b><span>Attention to materials, construction and consistent performance.</span></div><div class="feature"><b>Product guidance</b><span>Support to help identify a suitable cable for your application.</span></div><div class="feature"><b>One range, many needs</b><span>Explore products across multiple electrical applications.</span></div></div></div></div></section>
+<section class="story" id="manufacturing"><div class="wrap"><div class="section-head"><div class="kicker">Our Journey</div><h2>Focused on progress, quality and connection.</h2><p class="intro">A growing brand shaped by customer needs, product development and a commitment to dependable electrical solutions.</p></div><div class="timeline">
+<div class="milestone"><small>01 / FOUNDATIONS</small><h3>Building the Base</h3><p>Establishing a foundation around electrical products, materials and customer requirements.</p></div>
+<div class="milestone"><small>02 / EXPANSION</small><h3>Growing the Range</h3><p>Expanding product capabilities to address a wider set of wiring and cable applications.</p></div>
+<div class="milestone"><small>03 / CUSTOMERS</small><h3>Serving More Markets</h3><p>Strengthening relationships with channel partners, businesses and project customers.</p></div>
+<div class="milestone"><small>04 / INDUSTRY</small><h3>Industrial Applications</h3><p>Developing solutions for more demanding operating environments and installations.</p></div>
+<div class="milestone"><small>05 / INFRASTRUCTURE</small><h3>Powering Projects</h3><p>Supporting evolving requirements across power and electrical infrastructure.</p></div>
+<div class="milestone"><small>06 / THE ROAD AHEAD</small><h3>Continuing to Evolve</h3><p>Working towards broader product choice and stronger customer support.</p></div>
+</div></div></section>
+<section class="safety"><div class="wrap safety-grid"><div><div class="kicker">Safety First</div><h2>Safety leads every design decision.</h2><p class="intro">From choosing the right materials to selecting the right cable for an application, safety and dependable performance should always come first.</p><div class="safety-points"><span>Dependable transmission</span><span>Durable construction</span><span>Application support</span></div><a class="btn" style="margin-top:30px" href="#products">Explore Products</a></div><div class="safety-photo"></div></div></section>
+<section class="categories"><div class="wrap"><div class="section-head center"><div class="kicker">Product Categories</div><h2>One range. Every need.</h2><p class="intro">Explore wire and cable solutions for homes, industry, agriculture and power infrastructure.</p></div><div class="category-grid">
+<div class="category"><span class="num">01 / RESIDENTIAL</span><h3>Domestic Wires &amp; Cables</h3><p>Wiring solutions for homes, buildings and everyday electrical installations.</p><a class="arrow" href="#contact">Ask about domestic range →</a></div>
+<div class="category"><span class="num">02 / INDUSTRIAL</span><h3>Industrial &amp; Agricultural Cables</h3><p>Cable options for industrial equipment, machinery, pumps and agricultural use.</p><a class="arrow" href="#contact">Ask about industrial range →</a></div>
+<div class="category"><span class="num">03 / INFRASTRUCTURE</span><h3>Power &amp; Transmission Cables</h3><p>Solutions for power distribution, control applications and infrastructure projects.</p><a class="arrow" href="#contact">Ask about power range →</a></div>
+</div></div></section>
+<section class="products" id="products"><div class="wrap"><div class="section-head"><div class="kicker">What We Offer</div><h2>Wires and cables for every connection.</h2><p class="intro">Explore the RADICON-Lite product range. Contact our team for product availability, technical details and application guidance.</p></div><div class="product-grid">
+<div class="product"><div class="product-img"><span class="symbol">01</span></div><div class="product-body"><span class="label">Domestic</span><h3>Domestic Building Wires</h3><p>Wiring solutions for safe and reliable home electrification.</p><a href="#contact">More Details →</a></div></div>
+<div class="product"><div class="product-img"><span class="symbol">02</span></div><div class="product-body"><span class="label">Industrial</span><h3>Industrial Flexible Cables</h3><p>Flexible cable options for industrial equipment and demanding use.</p><a href="#contact">More Details →</a></div></div>
+<div class="product"><div class="product-img"><span class="symbol">03</span></div><div class="product-body"><span class="label">Multicore</span><h3>Industrial Flexible Multicore</h3><p>Multicore options for complex industrial wiring requirements.</p><a href="#contact">More Details →</a></div></div>
+<div class="product"><div class="product-img"><span class="symbol">04</span></div><div class="product-body"><span class="label">Agricultural</span><h3>Agricultural Flat Cables</h3><p>Flat cable solutions for agricultural pumps and equipment.</p><a href="#contact">More Details →</a></div></div>
+<div class="product"><div class="product-img"><span class="symbol">05</span></div><div class="product-body"><span class="label">Power</span><h3>Power Cables (XLPE / PVC)</h3><p>Power cable options for electrical distribution applications.</p><a href="#contact">More Details →</a></div></div>
+<div class="product"><div class="product-img"><span class="symbol">06</span></div><div class="product-body"><span class="label">Control</span><h3>Control Cables</h3><p>Cables designed for control and signal wiring applications.</p><a href="#contact">More Details →</a></div></div>
+<div class="product"><div class="product-img"><span class="symbol">07</span></div><div class="product-body"><span class="label">Transmission</span><h3>Transmission Conductors</h3><p>Conductor solutions for overhead power transmission requirements.</p><a href="#contact">More Details →</a></div></div>
+<div class="product"><div class="product-img"><span class="symbol">08</span></div><div class="product-body"><span class="label">Railway</span><h3>Railway Conductors</h3><p>Specialized conductor solutions for railway electrification needs.</p><a href="#contact">More Details →</a></div></div>
+</div></div></section>
+<section id="benefits"><div class="wrap"><div class="section-head"><div class="kicker">Benefits</div><h2>Function and safety, working together.</h2><p class="intro">The right cable combines material quality, suitable construction and reliable performance for its intended environment.</p></div><div class="benefit-grid">
+<div class="benefit"><div class="icon">⌁</div><h3>Safe Power Transmission</h3><p>Choose the right cable type and rating for safe electrical installations.</p></div>
+<div class="benefit"><div class="icon">◈</div><h3>Durable Construction</h3><p>Designed with attention to the demands of everyday use and installation.</p></div>
+<div class="benefit"><div class="icon">↝</div><h3>High Flexibility</h3><p>Flexible cable options can make routing and installation easier.</p></div>
+<div class="benefit"><div class="icon">▦</div><h3>Industrial Applications</h3><p>Options for machinery, equipment and demanding operating environments.</p></div>
+<div class="benefit"><div class="icon">⌂</div><h3>Agricultural Use</h3><p>Explore cable choices for pumps and agricultural equipment.</p></div>
+<div class="benefit"><div class="icon">ϟ</div><h3>Power Infrastructure</h3><p>Solutions for electrical distribution and infrastructure requirements.</p></div>
+<div class="benefit"><div class="icon">◎</div><h3>Application Support</h3><p>Get help identifying products for your specific installation needs.</p></div>
+<div class="benefit"><div class="icon">✧</div><h3>Product Range</h3><p>Multiple cable categories under one brand for varied requirements.</p></div>
+</div></div></section>
+<div class="cta"><div class="wrap cta-row"><div><h2>Need the right cable for your project?</h2><p>Talk to the RADICON-Lite team about product guidance and business enquiries.</p></div><a class="btn" href="#contact">Send a Message →</a></div></div>
+<section id="about"><div class="wrap about-grid"><div class="about-photo"></div><div><div class="kicker">About RADICON-Lite</div><h2>Connecting quality with everyday performance.</h2><p class="intro">RADICON-Lite is focused on wire and cable solutions for domestic, industrial and infrastructure applications. Our goal is to make it easier for customers and partners to find products suited to their requirements.</p><a class="arrow" href="#contact">Connect with our team →</a></div></div></section>
+<section class="collab"><div class="wrap collab-card"><div><div class="kicker">Our Approach</div><h3>Built around quality and customer confidence.</h3><p>We believe dependable electrical solutions begin with understanding the application, choosing the appropriate product and supporting customers with clear information.</p></div><a class="btn" href="#contact">Talk to Us</a></div></section>
+<section class="contact" id="contact"><div class="wrap contact-grid"><div><div class="kicker">Contact Details</div><h2>Get in touch.</h2><p class="intro">Share your requirement and our team can help you explore a suitable wire or cable option.</p><div class="contact-list"><div class="contact-item"><small>Phone</small><b>[Add official phone number]</b></div><div class="contact-item"><small>Email</small><b>[Add official email address]</b></div><div class="contact-item"><small>Office</small><b>[Add registered office address]</b></div><div class="contact-item"><small>Manufacturing</small><b>[Add factory address]</b></div></div></div>
+<form class="form" action="https://formsubmit.co/manishagr97@gmail.com" method="POST">
+<input type="hidden" name="_subject" value="New RADICON-Lite Website Enquiry">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_captcha" value="true">
+<input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+<input required name="Customer name" autocomplete="name" placeholder="Your name">
+<input required name="Phone number" type="tel" autocomplete="tel" placeholder="Phone number">
+<input name="Email address" type="email" autocomplete="email" placeholder="Email address">
+<input name="Location" placeholder="Location (city / state)">
+<select name="Requirement" required><option value="" disabled selected>Select requirement</option><option>Domestic wires</option><option>Industrial cables</option><option>Power cables</option><option>Transmission conductors</option><option>Solar DC cables</option><option>Other enquiry</option></select>
+<textarea name="Message" required placeholder="Tell us about your requirement"></textarea>
+<p style="font-size:.8rem;opacity:.75;line-height:1.5">By submitting, you agree that RADICON-Lite may contact you about your enquiry.</p>
+<button class="btn" type="submit">Submit Enquiry →</button></form></div></section>
+</main>
+<footer><div class="wrap"><div class="footgrid"><div class="footbrand"><img class="footer-brand-logo" src="assets/radiconlite-linkedin-logo.png" alt="RadiconLite Wires logo"><p>Powering a Safer, Stronger Tomorrow.</p></div><div class="footlinks"><h4>Products</h4><a href="#products">Domestic Wires</a><a href="#products">Industrial Cables</a><a href="#products">Transmission Conductors</a><a href="#products">Railway Conductors</a></div><div class="footlinks"><h4>Company</h4><a href="#about">About Us</a><a href="#why">Why Us</a><a href="#manufacturing">Our Journey</a></div><div class="footlinks"><h4>Useful Links</h4><a href="#contact">Contact Support</a><a href="#contact">Business Enquiries</a><a href="#contact">Get in Touch</a></div></div><div class="copyright"><span>© 2026 RADICON-Lite. All rights reserved.</span><span>Wires &amp; Cables</span></div></div></footer>
+<div class="cursor-light" aria-hidden="true"></div>
+<script>
+const links=document.querySelectorAll('nav a');links.forEach(a=>a.addEventListener('click',()=>document.querySelector('nav').classList.remove('open')));
+// A soft, diffused light follows the pointer across the page.
+const cursorLight=document.querySelector('.cursor-light');
+if(cursorLight && window.matchMedia('(hover: hover) and (pointer: fine)').matches && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+  let targetX=-500,targetY=-500,currentX=targetX,currentY=targetY,framePending=false;
+  const renderLight=()=>{currentX+=(targetX-currentX)*.18;currentY+=(targetY-currentY)*.18;cursorLight.style.transform=`translate3d(${currentX-220}px,${currentY-220}px,0)`;if(Math.abs(targetX-currentX)>.4||Math.abs(targetY-currentY)>.4){requestAnimationFrame(renderLight)}else{framePending=false}};
+  window.addEventListener('pointermove',e=>{targetX=e.clientX;targetY=e.clientY;document.body.classList.add('cursor-active');if(!framePending){framePending=true;requestAnimationFrame(renderLight)}},{passive:true});
+  window.addEventListener('pointerleave',()=>document.body.classList.remove('cursor-active'));
+  window.addEventListener('pointerenter',()=>document.body.classList.add('cursor-active'));
+}
+</script>
+</body></html>
